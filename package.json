@@ -2,9 +2,12 @@
   "name": "unify-payment-gateway",
   "version": "1.0.1",
   "description": "Unify payment gateway to support all payment gateways and provide one solution",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "npm run test"
+    "test": "npm run test",
+    "start:dev": "npx nodemon",
+    "start": "tsc && node dist/app.js",
+    "lint": "eslint . --ext .ts"
   },
   "repository": {
     "type": "git",
@@ -21,5 +24,15 @@
   "bugs": {
     "url": "https://github.com/sumit6387/unify-payment-gateway/issues"
   },
-  "homepage": "https://github.com/sumit6387/unify-payment-gateway#readme"
+  "homepage": "https://github.com/sumit6387/unify-payment-gateway#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.10.0",
+    "@types/node": "^22.5.5",
+    "eslint": "^9.10.0",
+    "globals": "^15.9.0",
+    "nodemon": "^3.1.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2",
+    "typescript-eslint": "^8.6.0"
+  }
 }

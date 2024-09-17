@@ -1,0 +1,25 @@
+{
+  "name": "unify-payment-gateway",
+  "version": "1.0.0",
+  "description": "Unify payment gateway to support all payment gateways and provide one solution",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sumit6387/unify-payment-gateway.git"
+  },
+  "keywords": [
+    "unify-payment-gateway",
+    "payment",
+    "razorpay",
+    "payu"
+  ],
+  "author": "Sumit Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sumit6387/unify-payment-gateway/issues"
+  },
+  "homepage": "https://github.com/sumit6387/unify-payment-gateway#readme"
+}

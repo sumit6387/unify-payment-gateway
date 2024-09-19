@@ -3,12 +3,17 @@
   "version": "1.0.1",
   "description": "Unify payment gateway to support all payment gateways and provide one solution",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "npm run test",
     "start:dev": "npx nodemon",
     "start": "tsc && node dist/app.js",
+    "build": "tsc",
     "lint": "eslint . --ext .ts"
   },
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sumit6387/unify-payment-gateway.git"
@@ -17,7 +22,11 @@
     "unify-payment-gateway",
     "payment",
     "razorpay",
-    "payu"
+    "payu",
+    "unify payment gateway",
+    "unify-payment-gateway-node",
+    "unify-payment-gateway-nodejs",
+    "unify payment gateway nodejs"
   ],
   "author": "Sumit Kumar",
   "license": "ISC",
@@ -34,5 +43,8 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.6.2",
     "typescript-eslint": "^8.6.0"
+  },
+  "dependencies": {
+    "razorpay": "^2.9.4"
   }
 }

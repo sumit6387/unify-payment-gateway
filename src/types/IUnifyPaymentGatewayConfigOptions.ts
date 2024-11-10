@@ -1,9 +1,9 @@
 import { EnvironmentEnum } from "../enums/EnvironmentEnum";
-import { ProviderEnum } from "../enums/ProviderEnum";
+import { ProviderTypes } from "./ProviderType";
 
 export interface IUnifyPaymentGatewayConfigOptions {
-    provider: ProviderEnum,
+    provider: ProviderTypes,
     clientId: string,
     clientSecret: string,
-    environment: EnvironmentEnum,
+    environment?: EnvironmentEnum,
 }

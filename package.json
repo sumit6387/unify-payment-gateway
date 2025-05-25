@@ -1,6 +1,6 @@
 {
   "name": "unify-payment-gateway",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Unify payment gateway to support all payment gateways and provide one solution",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

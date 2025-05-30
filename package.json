@@ -1,14 +1,15 @@
 {
   "name": "unify-payment-gateway",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Unify payment gateway to support all payment gateways and provide one solution",
   "main": "dist/index.js",
+  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "npm run test",
     "start:dev": "npx nodemon",
     "start": "tsc && node dist/app.js",
-    "build": "tsc",
+    "build": "tsup src/index.ts --format cjs,esm --dts",
     "lint": "eslint . --ext .ts"
   },
   "files": [

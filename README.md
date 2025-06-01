@@ -381,9 +381,13 @@ This project is licensed under the ISC License - see the [LICENSE](LICENSE) file
 - **GitHub Issues**: [Report bugs or request features](https://github.com/sumit6387/unify-payment-gateway/issues)
 - **GitHub Repository**: [https://github.com/sumit6387/unify-payment-gateway](https://github.com/sumit6387/unify-payment-gateway)
 
+## Sample Code
+**Javascript Sample Code** : [https://github.com/sumit6387/unify-payment-gateway-javascript-example](https://github.com/sumit6387/unify-payment-gateway-javascript-example)
+**Typescript Sample Code** : [https://github.com/sumit6387/unify-payment-gateway-typescript-example](https://github.com/sumit6387/unify-payment-gateway-typescript-example)
+
 ## Changelog
 
-### v1.0.3
+### v1.0.8
 - Initial release with Razorpay support
 - Full TypeScript support
 - Order, Customer, and Payment management
@@ -391,6 +395,6 @@ This project is licensed under the ISC License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Keywords**: unify-payment-gateway, payment, razorpay, payu, nodejs, typescript, payment-integration, unified-api
+**Keywords**: unify-payment-gateway, payment, razorpay, payu, nodejs, typescript, payment-integration
 
-Made with ❤️ by [Sumit Kumar](https://github.com/sumit6387) [Visit Site](https://sumitdev.in)
+Made with ❤️ by [Sumit Kumar](https://github.com/sumit6387) [Visit Portfolio](https://sumitdev.in)

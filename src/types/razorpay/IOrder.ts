@@ -5,7 +5,12 @@ export type IOrderCreatePayload = {
     currency: CurrencyEnum;
     receipt?: string;
     partial_payment?: boolean;
-    notes: Record<string, string>
+    notes: Record<string, string>;
+    name?: string;
+    email?: string;
+    phone?: string;
+    product_info?: string;
+    txn_id?: string;
 }
 
 
@@ -21,7 +26,7 @@ export type IOrderResponse = {
     offer_id?: string;
     status: string,
     attempts: number;
-    notes: any;
+    notes: string;
     created_at: number
 }
 
@@ -44,6 +49,18 @@ export type IOrderPaymentListResponse = {
     items: IOrderPaymentResponse[]
 }
 
+export type IOrderPaymentPayUResponse = {
+    amount: number;
+    name?: string;
+    email?: string;
+    phone?: string;
+    product_info?: string;
+    txn_id?: string;
+    merchantKey?: string;
+    hash?: string;
+    service_provider?: string;
+}
+
 export type IOrderPaymentResponse = {
     id: string;
     entity: string;
@@ -51,23 +68,23 @@ export type IOrderPaymentResponse = {
     currency: string;
     status: string;
     order_id: string;
-    invoice_id: any;
+    invoice_id: string;
     international: boolean
     method: string;
     amount_refunded: number;
-    refund_status: any;
+    refund_status: string;
     captured: boolean
     description: string;
     card_id: string;
-    bank: any;
-    wallet: any;
-    vpa: any;
+    bank: string;
+    wallet: string;
+    vpa: string;
     email: string;
     contact: string;
     notes: Record<string, string>;
     fee: number;
     tax: number;
-    error_code: any;
-    error_description: any;
+    error_code: string;
+    error_description: string;
     created_at: number;
 }

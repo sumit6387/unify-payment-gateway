@@ -11,7 +11,7 @@ export class Customer implements ICustomer {
     }
 
     async all(options: RazorpayPaginationOptions): Promise<ICustomerListResponse> {
-        var customers = await this._razorPayInstance.customers.all(options) as ICustomerListResponse;
+        const customers = await this._razorPayInstance.customers.all(options) as ICustomerListResponse;
         return customers;
     }
     async update(customerId: string, payload: ICustomerUpdatePayload): Promise<ICustomerResponse> {

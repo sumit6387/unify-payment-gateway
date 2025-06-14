@@ -12,6 +12,8 @@ export class Customer implements ICustomer {
     constructor(config: IUnifyPaymentGatewayConfigOptions) {
         this._config = config;
         if (this._config.provider == ProviderTypes.RAZORPAY) {
+            if(!this._config.clientSecret)
+                throw new Error("Client Secret is required for RazorPay");
             const razopay = new RazorPay(this._config.clientId, this._config.clientSecret);
             this.customer = razopay.customer;
         }

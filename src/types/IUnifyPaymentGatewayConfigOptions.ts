@@ -4,7 +4,7 @@ import { ProviderTypes } from "./ProviderType";
 export interface IUnifyPaymentGatewayConfigOptions {
     provider: ProviderTypes,
     clientId: string,
-    clientSecret: string | null,
-    salt?: string | null,
+    clientSecret?: string,
+    salt?: string,
     environment?: EnvironmentEnum,
 }

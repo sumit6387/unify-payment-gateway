@@ -12,6 +12,8 @@ export class Order implements IOrder {
     constructor(config: IUnifyPaymentGatewayConfigOptions) {
         this._config = config;
         if (this._config.provider == ProviderTypes.RAZORPAY) {
+            if(!this._config.clientSecret)
+                throw new Error("Client Secret is required for RazorPay");
             const razopay = new RazorPay(this._config.clientId, this._config.clientSecret);
             this.order = razopay.order;
         }else if(this._config.provider == ProviderTypes.PAYU){

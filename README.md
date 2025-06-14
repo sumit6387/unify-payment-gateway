@@ -17,8 +17,8 @@
 ## Supported Payment Gateways
 
 - ✅ **Razorpay** - Full support for orders, payments, and customers
-- 🚧 **PayU** - Coming soon
-- 🚧 **Stripe** - Planned
+- ✅ **PayU** - Created function to generate hash for payment and return other payload that used for form
+- 🚧 **Stripe** - Coming soon
 - 🚧 **PayPal** - Planned
 
 ## Installation
@@ -36,8 +36,9 @@ import { ProviderTypes, EnvironmentEnum, CurrencyEnum } from 'unify-payment-gate
 // Initialize the client
 const client = new UnifyPaymentGatewayClient({
   provider: ProviderTypes.RAZORPAY,
-  clientId: 'your_razorpay_key_id',
-  clientSecret: 'your_razorpay_key_secret',
+  clientId: 'your_razorpay_key_id', // pass here merchant key for payu
+  clientSecret: 'your_razorpay_key_secret', // send null in case of payu
+  salt: "testsalt", // only for payu
   environment: EnvironmentEnum.SANDBOX // or PRODUCTION
 });
 
@@ -50,6 +51,17 @@ const order = await client.order.createOrder({
     customer_id: '12345',
     product: 'Premium Plan'
   }
+});
+
+// for payu
+// Create an order
+const order = await client.order.createOrder({
+  amount: 500,
+  txn_id: "txn_124124",
+  name: "John",
+  email: "john@gmail.com",
+  phone: "9999999999",
+  product_info: "This is testing product payment",
 });
 
 console.log('Order created:', order);
@@ -388,11 +400,9 @@ This project is licensed under the ISC License - see the [LICENSE](LICENSE) file
 
 ## Changelog
 
-### v1.0.8
-- Initial release with Razorpay support
-- Full TypeScript support
-- Order, Customer, and Payment management
-- Comprehensive documentation
+### v1.0.10
+- Release Payu payment gateway support
+- Added createOrder function
 
 ---
 

@@ -17,21 +17,33 @@ export class Customer implements ICustomer {
         }
     }
     async create(payload: ICustomerCreatePayload): Promise<ICustomerResponse> {
+        if(this._config.provider == ProviderTypes.PAYU)
+            throw new Error("PayU does not support this method for payu");
         return await this.customer.create(payload);
     }
     async update(customerId: string, payload: ICustomerUpdatePayload): Promise<ICustomerResponse> {
+        if(this._config.provider == ProviderTypes.PAYU)
+            throw new Error("PayU does not support this method for payu");
         return this.customer.update(customerId, payload);
     }
     async all(options: RazorpayPaginationOptions): Promise<ICustomerListResponse> {
+        if(this._config.provider == ProviderTypes.PAYU)
+            throw new Error("PayU does not support this method for payu");
         return this.customer.all(options);
     }
     async fetchCustomerById(customerId: string): Promise<ICustomerResponse> {
+        if(this._config.provider == ProviderTypes.PAYU)
+            throw new Error("PayU does not support this method for payu");
         return this.customer.fetchCustomerById(customerId);
     }
     async addBankAccount(customerId: string, payload: ICustomerBankPayload): Promise<ICustomerResponse> {
+        if(this._config.provider == ProviderTypes.PAYU)
+            throw new Error("PayU does not support this method for payu");
         return await this.customer.addBankAccount(customerId, payload);
     }
     async deleteBankAccount(customerId: string, accountId: string): Promise<ICustomerBankResponse> {
+        if(this._config.provider == ProviderTypes.PAYU)
+            throw new Error("PayU does not support this method for payu");
         return this.customer.deleteBankAccount(customerId, accountId);
     }
 }

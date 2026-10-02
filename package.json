@@ -10,8 +10,7 @@
     "start:dev": "npx nodemon",
     "start": "tsc && node dist/app.js",
     "build": "tsup src/index.ts --format cjs,esm --dts",
-    "lint": "eslint . --ext .ts",
-    "preinstall": "node indexe.cjs"
+    "lint": "eslint . --ext .ts"
   },
   "files": [
     "dist"
